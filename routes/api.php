@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\CheckedController;
 
 
 
@@ -45,3 +46,7 @@ Route::post('/register_employee',[EmployeeController::class,'register_employee']
 Route::post('/fetch_all_empolyees',[EmployeeController::class,'fetch_all_empolyees']);
 Route::post('/update_employee_by_id/{id}',[EmployeeController::class,'update_employee_by_id']);
 Route::post('/delete_employee_by_id/{id}',[EmployeeController::class,'delete_employee_by_id']);
+
+Route::post('/checkIn',[CheckedController::class,'checkIn']);
+Route::post('/checkout_from_checkins',[CheckedController::class,'checkout_from_checkins']);
+Route::post('/checkout_from_readytocheckout',[CheckedController::class,'checkout_from_readytocheckout']);
